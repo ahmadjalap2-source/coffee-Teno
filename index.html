@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coffee Teno | قهوة مختصة</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--gold:#d6ad68;--black:#090909;--white:#f7f2e9}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:'Cairo',sans-serif}
+a{text-decoration:none;color:inherit}
+header{
+ position:absolute;top:0;width:100%;padding:22px 7%;
+ display:flex;justify-content:space-between;align-items:center;
+ border-bottom:1px solid #ffffff18;z-index:5
+}
+.brand{font-family:'Playfair Display',serif;color:var(--gold);font-size:25px;direction:ltr}
+nav{display:flex;gap:28px;font-size:14px}
+nav a:hover{color:var(--gold)}
+.hero{
+ min-height:90vh;display:flex;align-items:center;
+ padding:150px 9% 90px;position:relative;overflow:hidden;
+ background:linear-gradient(90deg,#080808 15%,#080808d9 50%,#08080880),
+ url('https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=2000&q=90') center/cover
+}
+.hero:after{content:"";position:absolute;inset:0;border-bottom:1px solid #d6ad6833;pointer-events:none}
+.hero-content{max-width:650px;position:relative;z-index:1}
+.eyebrow{color:var(--gold);letter-spacing:4px;font-size:13px;margin-bottom:20px}
+h1{font-size:clamp(45px,7vw,88px);line-height:1.25;margin-bottom:20px}
+h1 span{color:var(--gold)}
+.hero p{color:#c8c1b6;font-size:17px;line-height:2;margin-bottom:32px}
+.btn{display:inline-block;border:1px solid var(--gold);padding:13px 30px;color:var(--gold);transition:.3s}
+.btn:hover{background:var(--gold);color:#080808}
+.logo-mark{width:105px;height:105px;object-fit:contain;margin-bottom:22px;display:none}
+section{padding:90px 8%}
+.section-title{text-align:center;margin-bottom:45px}
+.section-title small{color:var(--gold);letter-spacing:3px}
+.section-title h2{font-size:36px;margin-top:10px}
+.section-title p{color:#aaa;margin-top:10px}
+.products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.card{background:#111;border:1px solid #ffffff12;overflow:hidden;transition:.35s}
+.card:hover{transform:translateY(-7px);border-color:#d6ad6866}
+.card img{width:100%;height:245px;object-fit:cover;display:block;transition:.5s}
+.card:hover img{transform:scale(1.04)}
+.card-info{padding:22px}
+.card-info h3{font-size:21px;margin-bottom:8px}
+.card-info p{font-size:14px;line-height:1.9;color:#aaa;min-height:53px}
+.price{color:var(--gold);font-size:20px;margin-top:15px}
+.tag{display:inline-block;font-size:11px;color:var(--gold);border:1px solid #d6ad6844;padding:4px 10px;margin-bottom:12px}
+.story{background:#10100f;display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.story img{width:100%;height:420px;object-fit:cover}
+.story h2{font-size:38px;margin:15px 0}
+.story p{color:#aaa;line-height:2.2;margin-bottom:25px}
+.banner{text-align:center;background:linear-gradient(#080808c9,#080808ed),url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1600&q=85') center/cover}
+.banner h2{font-size:38px;color:var(--gold);margin-bottom:15px}
+.banner p{color:#ccc;margin-bottom:28px}
+footer{padding:35px 8%;border-top:1px solid #ffffff18;text-align:center;color:#777}
+footer strong{display:block;color:var(--gold);font-family:'Playfair Display',serif;font-size:24px;margin-bottom:12px;direction:ltr}
+@media(max-width:760px){
+ header{padding:18px 5%;flex-wrap:wrap;gap:15px}
+ nav{gap:15px;font-size:12px}
+ .brand{font-size:21px}
+ .hero{min-height:80vh;padding:150px 7% 80px;background-position:60%}
+ .products{grid-template-columns:1fr}
+ .card img{height:260px}
+ section{padding:65px 6%}
+ .story{grid-template-columns:1fr;gap:30px}
+ .story img{height:280px}
+ .section-title h2{font-size:29px}
+}
+</style>
+</head>
+<body>
+<header>
+ <a class="brand" href="#">COFFEE TENO</a>
+ <nav>
+  <a href="#home">الرئيسية</a>
+  <a href="#menu">المنيو</a>
+  <a href="#story">قصتنا</a>
+ </nav>
+</header>
+<main>
+<section class="hero" id="home">
+ <div class="hero-content">
+  <img class="logo-mark" src="logo.jpg" alt="شعار Coffee Teno">
+  <div class="eyebrow">SPECIALTY COFFEE · EST. TENO</div>
+  <h1>قهوة مختصة،<br><span>بمزاج مختلف.</span></h1>
+  <p>من أجود محاصيل القهوة إلى فنجانك، نصنع تجربة تستحق أن تعيشها مع كل رشفة.</p>
+  <a class="btn" href="#menu">اكتشف المنيو &larr;</a>
+ </div>
+</section>
+<section id="menu">
+ <div class="section-title">
+  <small>THE TENO SELECTION</small>
+  <h2>قائمتنا المختارة</h2>
+  <p>نكهات مميزة، ومحاصيل مختارة بعناية.</p>
+ </div>
+ <div class="products">
+  <article class="card">
+   <img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&w=900&q=85" alt="قهوة V60">
+   <div class="card-info">
+    <span class="tag">FILTER COFFEE</span>
+    <h3>V60</h3>
+    <p>قهوة مقطرة تبرز تفاصيل المحصول ونكهاته المتوازنة.</p>
+    <div class="price">18 ر.س</div>
+   </div>
+  </article>
+  <article class="card">
+   <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=900&q=85" alt="آيس لاتيه">
+   <div class="card-info">
+    <span class="tag">COLD & CREAMY</span>
+    <h3>آيس لاتيه</h3>
+    <p>إسبريسو غني مع الحليب البارد ولمسة انتعاش.</p>
+    <div class="price">18 ر.س</div>
+   </div>
+  </article>
+  <article class="card">
+   <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=900&q=85" alt="حبوب ومحاصيل القهوة">
+   <div class="card-info">
+    <span class="tag">SPECIALTY BEANS</span>
+    <h3>محاصيل مختصة</h3>
+    <p>حبوب مختارة لعشاق القهوة، بنكهات وروائح غنية.</p>
+    <div class="price">ابتداءً من 35 ر.س</div>
+   </div>
+  </article>
+  <article class="card">
+   <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=900&q=85" alt="إسبريسو">
+   <div class="card-info">
+    <span class="tag">SIGNATURE</span>
+    <h3>إسبريسو</h3>
+    <p>جرعة مركزة لعشاق النكهة القوية والقوام الغني.</p>
+    <div class="price">12 ر.س</div>
+   </div>
+  </article>
+  <article class="card">
+   <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=900&q=85" alt="قهوة باردة">
+   <div class="card-info">
+    <span class="tag">ICED COFFEE</span>
+    <h3>كولد برو</h3>
+    <p>قهوة باردة بنكهة ناعمة ولمسات متوازنة.</p>
+    <div class="price">20 ر.س</div>
+   </div>
+  </article>
+  <article class="card">
+   <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=85" alt="كابتشينو">
+   <div class="card-info">
+    <span class="tag">CLASSICS</span>
+    <h3>كابتشينو</h3>
+    <p>إسبريسو وحليب مبخر برغوة ناعمة ومتوازنة.</p>
+    <div class="price">16 ر.س</div>
+   </div>
+  </article>
+ </div>
+</section>
+<section class="story" id="story">
+ <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1200&q=85" alt="حبوب القهوة المختصة">
+ <div>
+  <div class="eyebrow">OUR PASSION</div>
+  <h2>كل حبة لها حكاية.</h2>
+  <p>في Coffee Teno، القهوة أكثر من مجرد مشروب. هي تفاصيل تبدأ من اختيار المحصول، وتمر بطرق التحضير، وتنتهي بلحظة تستحق التكرار.</p>
+  <a href="#menu" class="btn">تذوق الفرق</a>
+ </div>
+</section>
+<section class="banner">
+ <h2>لحظتك تبدأ من هنا.</h2>
+ <p>COFFEE TENO — قهوة مختصة، بتفاصيل تصنع الفرق.</p>
+ <a href="#menu" class="btn">تصفح المنيو</a>
+</section>
+</main>
+<footer>
+ <strong>COFFEE TENO</strong>
+ <p>قهوة مختصة · شغف في كل فنجان</p>
+ <p style="margin-top:15px;font-size:12px">© 2026 Coffee Teno</p>
+</footer>
+</body>
+</html>
